@@ -4,7 +4,7 @@ import { Form, Button, Card } from "react-bootstrap";
 const Contact: React.FC = () => {
   return (
     <div>
-      <h2 className="mb-4">Contato</h2>
+      <h2 className="mb-4">Contact</h2>
       <Card className="shadow-sm p-4">
         <Form>
           <Form.Group className="mb-3" controlId="formName">

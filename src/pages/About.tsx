@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 const About: React.FC = () => {
   return (
     <div>
-      <h2 className="mb-4">Sobre Mim</h2>
+      <h2 className="mb-4">About</h2>
       <Card className="shadow-sm">
         <Card.Body>
           <Card.Text>

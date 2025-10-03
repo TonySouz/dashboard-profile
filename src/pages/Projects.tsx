@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
 
   return (
     <div>
-      <h2 className="mb-4">Projetos</h2>
+      <h2 className="mb-4">Projects</h2>
       <Row>
         {projetos.map((proj, index) => (
           <Col md={4} key={index}>
