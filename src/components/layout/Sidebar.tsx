@@ -6,8 +6,9 @@ const Sidebar: React.FC = () => {
   const location = useLocation();
   const [show, setShow] = React.useState(false);
 
+  // Tornar o link um container flex com gap entre ícone e texto
   const linkStyle = (path: string) =>
-    `my-2 ${location.pathname === path ? "fw-bold text-decoration-underline text-warning" : "text-white"}`;
+    `my-2 d-flex align-items-center gap-2 ${location.pathname === path ? "fw-bold text-primary" : "text-white"}`;
 
   return (
     <>
@@ -28,15 +29,22 @@ const Sidebar: React.FC = () => {
 
         <Nav className="flex-column mt-4">
           <Nav.Link as={Link} to="/" className={linkStyle("/")}>
+            <img src="/icons/home.svg" alt="Dashboard" width={20} height={20} />
             Dashboard
           </Nav.Link>
+
           <Nav.Link as={Link} to="/projects" className={linkStyle("/projects")}>
+            <img src="/icons/projects.svg" alt="Projects" width={20} height={20} />
             Projects
           </Nav.Link>
+
           <Nav.Link as={Link} to="/about" className={linkStyle("/about")}>
+            <img src="/icons/about.svg" alt="About" width={20} height={20} />
             About
           </Nav.Link>
+
           <Nav.Link as={Link} to="/contact" className={linkStyle("/contact")}>
+            <img src="/icons/contact.svg" alt="Contact" width={20} height={20} />
             Contact
           </Nav.Link>
         </Nav>
@@ -66,17 +74,21 @@ const Sidebar: React.FC = () => {
             <h5 className="mt-2">Tony Souza</h5>
           </div>
 
-          <Nav className="flex-column mt-4">
+          <Nav className="flex-column mt-4 text-white">
             <Nav.Link as={Link} to="/" className={linkStyle("/")} onClick={() => setShow(false)}>
+              <img src="/icons/home.svg" alt="Dashboard" width={20} height={20} />
               Dashboard
             </Nav.Link>
             <Nav.Link as={Link} to="/projects" className={linkStyle("/projects")} onClick={() => setShow(false)}>
+              <img src="/icons/projects.svg" alt="Projects" width={20} height={20} />
               Projects
             </Nav.Link>
             <Nav.Link as={Link} to="/about" className={linkStyle("/about")} onClick={() => setShow(false)}>
+              <img src="/icons/about.svg" alt="About" width={20} height={20} />
               About
             </Nav.Link>
             <Nav.Link as={Link} to="/contact" className={linkStyle("/contact")} onClick={() => setShow(false)}>
+              <img src="/icons/contact.svg" alt="Contact" width={20} height={20} />
               Contact
             </Nav.Link>
           </Nav>
